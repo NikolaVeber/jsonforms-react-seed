@@ -47,7 +47,7 @@ class App extends React.Component<AppProps, any> {
         </div>
 
         <Grid container justify={'center'} spacing={24} className={classes.container}>
-          <Grid item sm={6}>
+          <Grid item xs={4}>
             <Typography
               variant={'display1'}
               className={classes.title}

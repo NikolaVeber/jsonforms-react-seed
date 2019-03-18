@@ -1,37 +1,80 @@
 {
   "type": "object",
   "properties": {
-    "name": {
+    "firstName": {
       "type": "string"
     },
-    "description": {
+    "lastName": {
       "type": "string"
     },
-    "done": {
-      "type": "boolean"
-    },
-    "due_date": {
-      "type": "string",
-      "format": "date"
-    },
-    "rating": {
-      "type": "integer",
-      "maximum": 5
-    },
-    "recurrence": {
+    "gender": {
       "type": "string",
       "enum": [
-        "Never",
-        "Daily",
-        "Weekly",
-        "Monthly"
+        "Male",
+        "Female"
       ]
     },
-    "recurrence_interval": {
+    "active": {
+      "type": "boolean"
+    },
+    "timeOfRegistration": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "weight": {
+      "type": "number"
+    },
+    "heigth": {
       "type": "integer"
+    },
+    "nationality": {
+      "type": "string",
+      "enum": [
+        "German",
+        "French",
+        "UK",
+        "US",
+        "Spanish",
+        "Italian",
+        "Russian"
+      ]
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "email": {
+      "type": "string"
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "done": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "favouriteColor": {
+      "type": "string"
     }
   },
+  "additionalProperties": false,
   "required": [
-    "name"
+    "lastName",
+    "email"
   ]
 }
